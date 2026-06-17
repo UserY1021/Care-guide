@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Access Key</title>
+
+<style>
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, sans-serif;
+}
+
+.card{
+    text-align:center;
+}
+
+input{
+    padding:10px;
+    width:250px;
+    margin-top:15px;
+}
+
+button{
+    padding:10px 20px;
+    margin-top:15px;
+}
+
+#error{
+    color:red;
+    margin-top:15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h2>Access Key Required</h2>
+
+<input type="password" id="key">
+
+<br>
+
+<button onclick="checkKey()">
+Confirm
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script>
+
+function checkKey(){
+
+let key =
+document.getElementById("key").value;
+
+if(key === "solecito"){
+    window.location.href = "home.html";
+}
+else{
+    document.getElementById("error").innerText =
+    "Invalid access key";
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
